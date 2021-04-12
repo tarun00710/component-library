@@ -141,13 +141,14 @@ body{
      margin:1rem;
  }
  .btn{
-     padding:0.5rem 1rem 0.5rem 1rem;
+     padding:0.8rem;
      border-radius: 0.2rem;
-     margin:0 1rem 1rem 0;
      outline: none;
      border: none;
      color:white;
-     font-size: 1rem;
+     font-size: 0.8rem;
+     font-weight: 500;
+     margin-right: 10px;
  }
  .btn-primary{
      background-color: var(--primary-color);
@@ -209,29 +210,28 @@ body{
 .card-info{ 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .card-description{
     display: flex;
     flex-direction: column;
-
+}
+.card-description>p{
+    font-size: 0.9rem;
+}
+.card-description>span{
+    font-size: 0.7rem;
+    padding:10px 0 10px 0;
 }
 
 .card-button-option{
     display:flex;
-    align-self: flex-start;
+    flex-wrap: wrap;
 }
-.vcard-image{
+.hcard-image{
     width: 150px;
     height:auto;
 }
-
-/* .horizontal-card>img{
-    width: 100%;
-    height:20vh;
-    max-width: 150px;
-    margin-right:1rem;
-
-} */
 
 .card-dismiss{
     position: relative;
@@ -261,9 +261,9 @@ body{
     align-items: center;
 }
 .vertical-card{
-    width:30vw;
+    max-width:30vw;
     padding: 0.5rem;
-    border:2px solid grey;
+    border:2px solid rgb(196, 196, 196);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,12 +271,15 @@ body{
     
 }
 .vc-shadow{
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    max-width:30vw;
+    padding: 0.5rem;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
     margin:1rem;
 }
 .card-image{
     width: 100%;
     height:auto;
+    max-width: 250px;
 }
 .responsive-image-section{
     display: flex;
@@ -313,8 +316,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-   margin:3rem;
-   padding:1rem;
+    margin:3rem;
+    padding:1rem;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
 .form .form-input{
@@ -327,7 +330,7 @@ body{
 .List-style{
     display: flex;
     justify-content: center;
-    
+    flex-wrap: wrap;
 }
 .styled-list{
     display: flex;
@@ -497,13 +500,14 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-conter:center;
+    justify-content:center;
 }
 /*Grid vertical cards*/
 .grid-vertical-card{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fit,minmax(186px,1fr));
 }
+
 .heading-typo{
     display: flex;
     flex-direction:column;
